@@ -1,0 +1,26 @@
+.header a {
+  display: flex;
+  padding: 0.5rem;
+  border: 1px solid red;
+  border-radius: 15px;
+}
+.header a {
+  margin: 0 1rem;
+  justify-content: center;
+  text-decoration: none;
+}
+.header a .active {
+  background: brown;
+}
+.header ul {
+  display: flex;
+  padding: 0.5rem;
+}
+
+.divHeader {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+  border-radius: 16px;
+  border: 1px solid rebeccapurple;
+}

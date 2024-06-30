@@ -1,29 +1,24 @@
-import React from 'react'
-import styles from './titulo.module.css' 
+import React from "react";
+import styles from "./titulo.module.css";
+
 function Titulo() {
+  const [animacaoFinalizada, setAnimacaoFinalizada] = React.useState(false);
+  const myRef = React.useRef(null);
 
-       const [animacaoFinalizada, setAnimacaoFinalizada] = React.useState(false)
+  React.useEffect(() => {
+    const timeout = setTimeout(() => {
+      setAnimacaoFinalizada(true);
+    }, 4600); // Duração da animação
 
-     
-       React.useEffect(() => {
-                     const elemento = document.getElementById("body")
-                     const timeout = setTimeout(() => {
-                            setAnimacaoFinalizada(true);
-                     }, 4600); // Duração da animação
-                 
-                     return () => clearTimeout(timeout);
-                   }, []);
+    return () => clearTimeout(timeout);
+  }, []);
 
-
-       
   return (
-    <div id={styles.typewriter}>
-                <h1 className={styles.titulo}> Seja Bem vindx!</h1>
-                <div>
-                     {animacaoFinalizada && <div>ANIMACAO TERMINADA</div> }
-                </div>
+    <div id={styles.typewriter} ref={myRef}>
+      <h1 className={styles.titulo}> Seja Bem vindx!</h1>
+      <div>{animacaoFinalizada && <div>ANIMACAO TERMINADA</div>}</div>
     </div>
-  )
+  );
 }
 
-export default Titulo
+export default Titulo;

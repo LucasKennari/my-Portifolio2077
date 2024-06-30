@@ -1,34 +1,40 @@
-.titulo{
-       /* background-color: #282c34; */
-       color: #61dafb;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-      
-       font-family: monospace;
-       margin: 0;
-}      
 .titulo {
-       display: inline-block;
+  /* background-color: #282c34; */
+  color: #61dafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  font-family: monospace;
+  margin: 0;
+}
+.titulo {
+  display: inline-block;
 }
 #typewriter h1 {
-       overflow: hidden; /* Ensures the content is not revealed until the animation */
-       border-right: .15em solid #61dafb; /* The typwriter cursor */
-       white-space: nowrap; /* Keeps the content on a single line */
-       margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-       letter-spacing: .15em; /* Adjust as needed */
-       animation: 
-           typing 3.5s steps(40, end),
-           blink-caret .75s step-end infinite;
-   }
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #61dafb; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
 
 @keyframes typing {
-       from { width: 0 }
-       to { width: 100% }
-   }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 
-   @keyframes blink-caret {
-       from, to { border-color: transparent }
-       50% { border-color: #61dafb }
-   }
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #61dafb;
+  }
+}
